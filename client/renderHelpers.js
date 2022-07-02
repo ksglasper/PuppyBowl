@@ -44,9 +44,7 @@ export const renderAllPlayers = (playerList) => {
     const button = detailButtons[i];
     button.addEventListener("click", async (event) => {
       let pupId = event.target.dataset.id;
-      console.log(event.target.dataset.id);
       const pupObj = await fetchSinglePlayer(pupId);
-      console.log(pupObj);
 
       renderSinglePlayer(pupObj);
     });
@@ -59,7 +57,6 @@ export const renderAllPlayers = (playerList) => {
       // event.preventDefault();
 
       let pupId = event.target.dataset.id;
-      console.log(pupId);
 
       await removePlayer(pupId);
 
